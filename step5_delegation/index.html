@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Super souris collection</title>
+    <meta name="description" content="Préparation de l'interface d'un carrousel réalisé en javascript dans un prochain module.">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/slider.js"></script>
+</head>
+<body>
+    <header class="banner">
+        <a class="banner-logo" href="./">Slider de photos</a>
+        <p class="banner-baseline">Super souris collection</p>
+        <nav class="banner-nav">
+            <a class="nav-link" href="../step1_reward_forward/">Avancer</a>
+            <a class="nav-link" href="../step2_keyboard/">Clavier</a>
+            <a class="nav-link" href="../step3_diaporama/">Diaporama</a>
+            <a class="nav-link" href="../step4_pagination/">Pagination</a>
+            <a class="nav-link is-active" href="../step5_delegation/">Délégation</a>
+            <a class="nav-link" href="../step6_final_poo/">POO</a>
+        </nav>
+    </header>
+    <main>
+
+        <div class="slider"> 
+            <div class="slider-container" aria-live="polite" role="region" aria-labelledby="Galerie Photos">
+                <figure class="slider-figure animate__animated" aria-hidden="false">
+                    <img class="slider-picture" src="./img/souris_kart.webp" alt="Super souris en kart">
+                    <figcaption class="slider-legend">Exemple de réalisation par AI</figcaption>
+                </figure>
+            
+                <figure class="slider-figure is-hidden animate__animated" aria-hidden="true">
+                    <img class="slider-picture" src="./img/souris_campagne.webp" alt="">
+                    <figcaption class="slider-legend">Souris à la campagne</figcaption>
+                </figure>
+                
+                <figure class="slider-figure is-hidden animate__animated" aria-hidden="true">
+                    <img class="slider-picture" src="./img/souris_bike.webp" alt="">
+                    <figcaption class="slider-legend">Souris en moto</figcaption>
+                </figure>
+
+                <figure class="slider-figure is-hidden animate__animated" aria-hidden="true">
+                    <img class="slider-picture" src="./img/souris_burger.webp" alt="">
+                    <figcaption class="slider-legend">Souris affamée</figcaption>
+                </figure>
+
+                <figure class="slider-figure is-hidden animate__animated" aria-hidden="true">
+                    <img class="slider-picture" src="./img/souris_city.webp" alt="">
+                    <figcaption class="slider-legend">Souris en ville</figcaption>
+                </figure>
+
+                <figure class="slider-figure is-hidden animate__animated" aria-hidden="true">
+                    <img class="slider-picture" src="./img/souris_cook.webp" alt="">
+                    <figcaption class="slider-legend">Souris en cuisine</figcaption>
+                </figure>
+                <figure class="slider-figure is-hidden animate__animated" aria-hidden="true">
+                    <img class="slider-picture" src="./img/souris_scooter.webp" alt="">
+                    <figcaption class="slider-legend">Souris en scooter</figcaption>
+                </figure>
+                <figure class="slider-figure is-hidden animate__animated" aria-hidden="true">
+                    <img class="slider-picture" src="./img/souris_ecosse.webp" alt="">
+                    <figcaption class="slider-legend">Souris écossaise</figcaption>
+                </figure>
+            </div>
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+    <symbol id="icon-play" viewBox="0 0 32 32">
+    <path d="M6 4l20 12-20 12z"></path>
+    </symbol>
+    <symbol id="icon-pause" viewBox="0 0 32 32">
+    <path d="M4 4h10v24h-10zM18 4h10v24h-10z"></path>
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 32 32">
+    <path d="M19.414 27.414l10-10c0.781-0.781 0.781-2.047 0-2.828l-10-10c-0.781-0.781-2.047-0.781-2.828 0s-0.781 2.047 0 2.828l6.586 6.586h-19.172c-1.105 0-2 0.895-2 2s0.895 2 2 2h19.172l-6.586 6.586c-0.39 0.39-0.586 0.902-0.586 1.414s0.195 1.024 0.586 1.414c0.781 0.781 2.047 0.781 2.828 0z"></path>
+    </symbol>
+    <symbol id="icon-arrow-left" viewBox="0 0 32 32">
+    <path d="M12.586 27.414l-10-10c-0.781-0.781-0.781-2.047 0-2.828l10-10c0.781-0.781 2.047-0.781 2.828 0s0.781 2.047 0 2.828l-6.586 6.586h19.172c1.105 0 2 0.895 2 2s-0.895 2-2 2h-19.172l6.586 6.586c0.39 0.39 0.586 0.902 0.586 1.414s-0.195 1.024-0.586 1.414c-0.781 0.781-2.047 0.781-2.828 0z"></path>
+    </symbol>
+    <symbol id="icon-stop" viewBox="0 0 32 32">
+    <path d="M4 4h24v24h-24z"></path>
+    </symbol>
+</defs>
+</svg>
+            <nav class="slider-navigation">
+                <a class="slider-navigation-link" rel="prev" href="#" role="button">
+                     <svg class="icon icon-arrow-left">
+                        <title>Photo précédente</title>
+                        <use xlink:href="#icon-arrow-left"></use>
+                    </svg>
+                </a>
+                <a class="slider-navigation-link" rel="next" href="#" role="button">
+                    <svg class="icon icon-arrow-left">
+                        <title>Photo suivante</title>
+                        <use xlink:href="#icon-arrow-right"></use>
+                    </svg>
+                </a>
+                <button class="slider-diaporama" type="button" role="button">
+                    <svg class="icon icon-play">
+                        <title>Lancer le diaporama</title>
+                        <use xlink:href="#icon-play"></use>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+
+    </main>
+    <footer class="footer">
+        <p>@ Véronique CUOMO - Formation Développeur WEB - Merci à <a href="https://pixabay.com/">Pixabay</a> pour les photos</p>
+    </footer>    
+</body>
+</html>

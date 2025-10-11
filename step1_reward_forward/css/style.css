@@ -1,0 +1,232 @@
+/**
+ * Styles de base 
+ * 
+ */
+
+ 
+* {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+ 
+body {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /* Hauteur minimum : 100% de la hauteur de la fenêtre */
+    min-height: 100vh; 
+    margin: 0;
+    background-color: #333;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;    
+}
+
+a {
+    color: #ccc;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #fff;
+}
+
+/* Image responsive  : empêcher l'image de déborder de son conteneur */
+img {
+    max-width: 100%;
+    height: auto;
+
+    /* Supprimer l'espace indésirable sous la photo lié à la valeur baseline  */
+    vertical-align: middle;
+}
+
+main {
+    padding-top : 2em;
+    padding-bottom: 2em;
+}
+
+
+/* Bannière et footer */
+.banner,
+.footer {
+    column-gap: 1em;
+
+    padding: 1em;
+    background: black;
+    text-align: center;
+}
+
+.banner {
+    display: grid;
+    row-gap : 1em;
+
+    @media (min-width: 768px) {
+        grid-template-columns: 2fr 1fr 2fr;
+        align-items: center;
+        column-gap : 1em;
+    }
+}
+
+.banner-link {
+    display: flex;
+    justify-self: center;
+    @media (min-width: 768px) {
+        justify-self: start;
+    }
+
+    text-decoration: none;
+}
+
+.banner-logo {
+    width: 100px;
+    vertical-align: middle;
+}
+
+.banner-description {
+    margin-left: -30px;
+    margin-top: 10px;
+    background-color: black;
+    align-self: center;
+    font-size : 1.5vmax;
+    font-weight: bold;
+}
+
+
+.banner-baseline { 
+    text-transform: uppercase;
+    text-decoration: underline overline;
+}
+
+.banner-nav {
+    justify-self: end;
+    align-self: end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0.8em;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.5);
+}
+
+.nav-link.is-active {
+    color: white;
+}
+
+.nav-link:not(:last-child)::after {
+    content : '|';
+    display: inline-block;
+    margin : 0 0.5rem;
+    color: rgba(255,255,255,0.5);
+}
+
+/* Classes utiles */
+
+.is-hidden {
+    display: none !important;
+}
+
+/* SLIDER */
+
+.slider {
+    /* Référent des liens de la nav */
+    position: relative;
+
+    /*  
+    Solution 1 pour que l'élément prenne la largeur de la figure
+    et que les liens se positionnent correctement et non aux bords
+    il faut aligner le texte de main
+    display: inline-block; */
+
+    /* Solution 2 : donner la taille du contenu au maximum */
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.slider-figure {
+    /* Pour que la figure prenne la largeur de la photo */
+    display: inline-block;
+    /* Pour servir de référent à la légende  */
+    position: relative;
+
+    /* Par défaut le figures ont une marge de 40px  */
+    margin: 0;
+
+    /* Avec un fond ou une bordure on appréhende mieux ce qui se passe */
+    border: 5px #fff solid;    
+}
+
+.slider-legend {
+    position: absolute;
+    left:0; right:0;
+    bottom:0;
+
+    padding: 1em;
+    background-color: rgb(0,0,0);
+
+    /* Transparence de couleur : 50% de transparence alpha */
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.slider-navigation-link {
+    position: absolute;
+    left: -40px;
+    top: 50%;
+
+    /* 
+        Pour centrer verticalement parfaitement les liens
+
+        Solution 1 : marge négative de la moitié de la hauteur  si on la connaît  */
+    /* margin-top : -16px;*/
+
+    /* Désormais on choisira plutôt transform apparue avec CSS3 */ 
+    transform: translateY(-50%);
+    color: #fff;
+
+    transition: transform 1s;
+}
+
+.slider-navigation-link:hover {
+    transform: translateY(-50%) scale(3);
+}
+
+
+.slider-navigation-link[rel=next] {
+    left: auto;
+    right: -40px;
+}
+
+.slider-navigation-link svg {
+    width: 40px; 
+    height: 40px;
+    fill: #fff;
+    transition: fill 1s;
+}
+
+.slider-navigation-link:hover svg {
+    fill: red;
+}
+
+
+/* Contenu généré en CSS */
+
+.slider-legend::after,
+.slider-legend::before {
+    content: '*';
+    color : red;
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+

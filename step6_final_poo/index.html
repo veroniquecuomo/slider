@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Super souris collection</title>
+    <meta name="description" content="Préparation de l'interface d'un carrousel réalisé en javascript dans un prochain module.">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js"></script>
+    <!-- 
+    Pour voir que les variables sont locales à un module
+    <script type="module" src="js/foo.js"></script>
+    -->
+</head>
+<body>
+    <header class="banner">
+        <a class="banner-link" href="./">
+           <img class="banner-logo" src="img/logo.png" alt="Appareil photo">
+           <span class="banner-description">Slider de&nbsp;Photos</span>
+        </a>
+        <p class="banner-baseline">Super souris collection</p>
+        <nav class="banner-nav">
+            <a class="nav-link" href="../step1_reward_forward/">Avancer</a>
+            <a class="nav-link" href="../step2_keyboard/">Clavier</a>
+            <a class="nav-link" href="../step3_diaporama/">Diaporama</a>
+            <a class="nav-link" href="../step4_pagination/">Pagination</a>
+            <a class="nav-link" href="../step5_delegation/">Délégation</a>
+            <a class="nav-link is-active" href="../step6_final_poo/">POO</a>
+        </nav>
+    </header>
+    <main>
+
+        <div class="mySlider slider" data-animationleft="animate__slideInRight" data-animationright="animate__slideInLeft"> 
+            <div class="slider-container" aria-live="polite" role="region" aria-labelledby="Galerie Photos">
+                <figure class="slider-slide slider-figure animate__animated" aria-hidden="false">
+                    <img class="slider-picture" src="./img/souris_kart.webp" alt="Super souris en kart">
+                    <figcaption class="slider-legend">Exemple de réalisation par AI</figcaption>
+                </figure>
+            
+                <figure class="slider-slide slider-figure animate__animated" aria-hidden="true">
+                    <img class="slider-picture" src="./img/souris_campagne.webp" alt="">
+                    <figcaption class="slider-legend">Souris à la campagne</figcaption>
+                </figure>
+                
+                <figure class="slider-slide slider-figure animate__animated" aria-hidden="true">
+                    <img class="slider-picture" src="./img/souris_bike.webp" alt="">
+                    <figcaption class="slider-legend">Souris en moto</figcaption>
+                </figure>
+
+                <figure class="slider-slide slider-figure animate__animated" aria-hidden="true">
+                    <img class="slider-picture" src="./img/souris_burger.webp" alt="">
+                    <figcaption class="slider-legend">Souris affamée</figcaption>
+                </figure>
+
+                <figure class="slider-slide slider-figure animate__animated" aria-hidden="true">
+                    <img class="slider-picture" src="./img/souris_city.webp" alt="">
+                    <figcaption class="slider-legend">Souris en ville</figcaption>
+                </figure>
+
+                <figure class="slider-slide slider-figure animate__animated" aria-hidden="true">
+                    <img class="slider-picture" src="./img/souris_cook.webp" alt="">
+                    <figcaption class="slider-legend">Souris en cuisine</figcaption>
+                </figure>
+                <figure class="slider-slide slider-figure animate__animated" aria-hidden="true">
+                    <img class="slider-picture" src="./img/souris_scooter.webp" alt="">
+                    <figcaption class="slider-legend">Souris en scooter</figcaption>
+                </figure>
+                <figure class="slider-slide slider-figure animate__animated" aria-hidden="true">
+                    <img class="slider-picture" src="./img/souris_ecosse.webp" alt="">
+                    <figcaption class="slider-legend">Souris écossaise</figcaption>
+                </figure>
+            </div>
+        </div>
+
+    </main>
+    <footer class="footer">
+        <p>@ Véronique CUOMO - Formation Développeur WEB - Merci à <a href="https://pixabay.com/">Pixabay</a> pour les photos</p>
+    </footer>    
+</body>
+</html>
