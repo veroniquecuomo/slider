@@ -31,9 +31,9 @@ Présentation d'un album photos sous forme de carousel
 
 ## Étapes
 
-**step1 :** Mise en place, positions CSS
-**step2 :** Avancer, Reculer
-**step3 :** Diaporama (fonction chronomètre)
-**step4 :** Gestion du clavier
-**step5 :** Pagination et délégation d'événement
-**step6 :** Module POO
+1. **step1 :** Mise en place, positions CSS
+2. **step2 :** Avancer, Reculer
+3. **step3 :** Diaporama (fonction chronomètre)
+4. **step4 :** Gestion du clavier
+5. **step5 :** Pagination et délégation d'événement
+6. **step6 :** Module POO
