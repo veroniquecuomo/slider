@@ -2,6 +2,7 @@
 
 Projet pédagogique
 
+
 [Voir le projet enligne](https://veroniquecuomo.github.io/slider/step6_final_poo/)
 
 ## Objectifs
